@@ -31,7 +31,7 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Button Content="Button" HorizontalAlignment="Left" Margin="30,41.2,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="Button_Click"/>
-        <ProgressBar Grid.Column="1" Grid.Row="1" Height="20" ValueChanged="ProgressBar_ValueChanged"/>
+        <ProgressBar Grid.Column="1" Grid.Row="1" Height="20" />
         <StackPanel Grid.Column="1" Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Margin="218,0.2,13.4,-0.2" Grid.ColumnSpan="3" Width="147">
             <TextBlock TextWrapping="Wrap" Text="Avoid These" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF9F8F8" Width="134" Margin="13,0,0.2,0"/>
             <ContentControl Content="ContentControl" Template="{DynamicResource EnemyTemplate}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="10,0,0.2,0" Height="76"/>
