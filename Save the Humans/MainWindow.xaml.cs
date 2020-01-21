@@ -31,9 +31,9 @@ namespace Save_the_Humans
             InitializeComponent();
             enemyTimer.Tick += enemyTimer_tick;
             enemyTimer.Interval = TimeSpan.FromSeconds(2);
-
             targetTimer.Tick += targetTimer_Tick;
             targetTimer.Interval = TimeSpan.FromSeconds(.1);
+            gameOverText.Visibility = Visibility.Collapsed;
         }
 
         private void targetTimer_Tick(object sender, EventArgs e)
@@ -49,6 +49,7 @@ namespace Save_the_Humans
                 enemyTimer.Stop();
                 targetTimer.Stop();
                 humanCaptured = false;
+                gameOverText.Visibility = Visibility.Visible;
                 startButton.Visibility = Visibility.Visible;
                 playArea.Children.Add(gameOverText);
             }
