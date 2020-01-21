@@ -26,6 +26,8 @@ namespace Save_the_Humans
         DispatcherTimer enemyTimer = new DispatcherTimer();
         DispatcherTimer targetTimer = new DispatcherTimer();
         bool humanCaptured = false;
+        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,6 +36,8 @@ namespace Save_the_Humans
             targetTimer.Tick += targetTimer_Tick;
             targetTimer.Interval = TimeSpan.FromSeconds(.1);
             gameOverText.Visibility = Visibility.Collapsed;
+            
+           
         }
 
         private void targetTimer_Tick(object sender, EventArgs e)
@@ -82,6 +86,7 @@ namespace Save_the_Humans
         {
             ContentControl enemy = new ContentControl();
             enemy.Template = Resources["EnemyTemplate"] as ControlTemplate;
+         
             AnimateEnemy(enemy, 0, playArea.ActualWidth - 100, "(Canvas.Left)");
             AnimateEnemy(enemy, random.Next((int)playArea.ActualHeight - 100), random.Next((int)playArea.ActualHeight - 100), "(Canvas.Top)");
             playArea.Children.Add(enemy);
